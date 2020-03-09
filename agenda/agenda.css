@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* AGENDA */
+
+ul.agenda * {
+    list-style: none;
+    text-decoration: none;
+}
+
+ul.agenda li a {
+    display: grid;
+    grid-template-columns: /*TAMAÑO DEL ICONO + ESPACIOS A LOS LADOS -> */ 40px /* <- */ minmax(10px, 1fr);
+    column-gap: 5px;
+    position: relative;
+    padding: 5px;
+
+    /*COLOR DE TODO*/
+    color: rgb(15,15,15, 1)
+}
+    ul.agenda li a:hover {
+        color: rgb(35,35,35, 0.9955)
+    }
+
+ul.agenda li a .a-icon-box {
+    border-right: 2px solid rgb(75,75,75, 0.9);
+    box-sizing: border-box;
+    text-align: center;
+    align-self: center;
+
+    /*TAMAÑO DEL ICONO*/
+    font-size: 40px;
+    line-height: 40px;
+}
+
+ul.agenda li a .a-content .a-title {
+    font-size: 1.2rem;
+}
+
+ul.agenda li a .a-content .a-description {
+    font-size: 0.8rem;
+}
+
+ul.agenda li a .a-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    transition: right ease-in-out 0.075s;
+    
+    /*TAMAÑO DE LA FLECHA*/
+    font-size: 1rem;
+}
+    ul.agenda li a:hover .a-arrow {
+        right: 5px;
+    }
+
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
